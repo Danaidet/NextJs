@@ -8,6 +8,7 @@ export default function Navbar() {
                 <li><Link href="/" className="navlink">หน้าแรก</Link></li>
                 <li><Link href="/courses" className="navlink">รายวิชา</Link></li>
                 <li><Link href="/about" className="navlink">เกี่ยวกับ</Link></li>
+                <li><Link href="/band" className="navlink">วงดนตรีที่ชอบๆ</Link></li>
             </ul>
         </nav>
     );

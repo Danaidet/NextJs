@@ -1,0 +1,17 @@
+import {Course} from "@/types/course" ; 
+type CourseCardProps = { 
+  course: Course;
+  description?: string; 
+};
+
+export default function CourseCard({ course }: CourseCardProps){
+    return (
+        <article key={course.code} className="courseCard">
+            <h2>{course.id}. {course.title}</h2>
+            <p>รหัสวิชา : {course.code}</p>
+            <p>{course.credits} หน่วยกิต</p>
+            <p>{course.isOpen ? "เปิดลงทะเบียน" : "ปิดลงทะเบียน"}</p>
+            <br />
+        </article>
+    );
+} 

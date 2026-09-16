@@ -1,7 +1,15 @@
 export type Course = { 
-  id: number; 
+  id: string; 
   code: string; 
-  title: string; 
-  credits: number; 
-  isOpen: boolean; 
-};
+  name: string; 
+  credit: number; 
+  instructor: string; 
+}; 
+
+// export type Course = { 
+//   id: number; 
+//   code: string; 
+//   title: string; 
+//   credits: number; 
+//   isOpen: boolean; 
+// };

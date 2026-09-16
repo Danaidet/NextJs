@@ -1,15 +1,18 @@
 import CourseCard from "@/components/CourseCard";
-import { course } from "@/Data/coursedata";
+import type { Metadata } from "next";
+import { courses } from "@/Data/coursedata";
+import Buttoncomponent from "@/components/buttoncomponent";
+import CounterDemo from "@/components/CounterDemo";
+import CourseExplorer from "@/components/CourseExplorer";
+
+export const metadata: Metadata = {
+    title: "รายวิชาทั้งหมด",
+};
+
 export default function Coursepage() {
     return (
-        <>
-            < div className="px-8 py-8">
-                <section className="courseGrid">
-                    {course.map((course) => (
-                        <CourseCard key={course.id} course={course}/>
-                    ))}
-                </section>
-            </div >
-        </>
-    )
+        <div className="py-3 px-3">
+            <CourseExplorer initialCourses={courses} />
+        </div>
+    );
 }
